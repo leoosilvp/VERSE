@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Auto-advance carroussel
-    let carrousselInterval = setInterval(nextSlide, 5000);
+    let carrousselInterval = setInterval(nextSlide, 8000);
 
     // Pause on hover
     const carrousselSection = document.querySelector('.carroussel');
@@ -48,6 +48,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     carrousselSection.addEventListener('mouseleave', () => {
-        carrousselInterval = setInterval(nextSlide, 5000);
+        carrousselInterval = setInterval(nextSlide, 8000);
     });
 });

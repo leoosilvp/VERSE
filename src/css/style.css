@@ -11,8 +11,9 @@
     --primary-color: #ffae00;
     --secundary-color: #f5f5f5;
     --box-shadow: 0px 0px 0px 0px #1e1e1e;
-    --contorno: 1px solid #fff;
+    --contorno: 1px solid #ffffff29;
     --title: 2rem;
+    --title-card: 1.4rem;
     --sub-title: 1.02rem;
     --font-1: 1rem;
     --font-2: 0.8rem;
@@ -22,9 +23,9 @@
 
 body{
     font-family: "Roboto Condensed";
-    background-image: url(../assets/img/funfoo.gif);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url(../assets/img/fundo2.png);
+    background-size: 100%;
+    background-repeat: repeat;
 }
 
 header{
@@ -139,7 +140,9 @@ nav ul li a:hover{
 
 
 #hero{
-    margin: 60px 230px 60px 230px;
+    background-image: url(../assets/img/fundo.gif);
+    background-repeat: no-repeat;
+    background-size: 100%;
     z-index: 1;
 }
 
@@ -170,6 +173,7 @@ nav ul li a:hover{
 }
 
 .carroussel {
+    margin-top: 60px;
     position: relative;
     width: 800px;
     height: 100%;
@@ -180,7 +184,7 @@ nav ul li a:hover{
 
 .carroussel-container {
     display: flex;
-    transition: all 1s ease;
+    transition: all 0.8s ease;
 }
 
 #banner{
@@ -191,7 +195,7 @@ nav ul li a:hover{
     text-align: center;
     padding: 50px;
     background: #3d5163a4;
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(15px);
     color: var(--secundary-color);
 }
 
@@ -231,11 +235,98 @@ nav ul li a:hover{
 }
 
 #ctn-cards{
+    margin: 90px 120px 0px 120px ;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
+    gap: 50px;
+}
+
+.card img{
+    border-radius: var(--border-radius);
+    display: flex;
+    width: 100%;
 }
 
 .card{
     width: 250px;
+    height: 100%;
+    background: #5c5d64b0;
+    backdrop-filter: blur(10px);
+    border-radius: var(--border-radius);
+    border: var(--contorno);
+    box-shadow: 0px 0px 20px 5px #000000d4;
+    color: var(--secundary-color);
+    transition: var(--transition);
 }
+
+.card:hover{
+    transform: scale(1.05);
+}
+
+.conteudo-card{
+    padding: 25px 20px;
+}
+
+.conteudo-card h1{
+    font-size: var(--title-card);
+    font-weight: 600;
+}
+
+.avaliacao{
+    display: flex;
+    margin-top: 10px;
+    width: 123px;
+    min-width: 110px;
+    padding: 5px;
+    font-size: 10px;
+    border-radius: var(--border-radius);
+    background: #333333;
+    backdrop-filter: blur(4px);
+}
+
+.avaliacao h2{
+    font-weight: 500;
+}
+
+.avaliacao h2 span{
+    color: #43a800;
+}
+
+.acao{
+    display: flex;
+    margin-right: -20px;
+    margin-top: 90px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.acao h2{
+    font-size: var(--title-card);
+    width: 106px;
+    background: #000000dc;
+}
+
+.acao h2 span{
+    background: #43a800;
+}
+
+.acao button{
+    width: 80px;
+    height: 35px;
+    background: var(--secundary-color);
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: var(--font-1);
+    font-weight: 600;
+    color: #000;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.acao button:hover{
+    transform: scale(1.05);
+    background: #000;
+    color: var(--secundary-color);
+}
+
