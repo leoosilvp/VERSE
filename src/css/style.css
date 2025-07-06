@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    gap: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color: #ffae00;
+    --secundary-color: #f5f5f5;
+    --box-shadow: 0px 0px 0px 0px #1e1e1e;
+    --contorno: 1px solid #fff;
+    --title: 2rem;
+    --sub-title: 1.02rem;
+    --font-1: 1rem;
+    --font-2: 0.8rem;
+    --transition: all 0.3s ease;
+    --border-radius: 3px;
+}
+
+body{
+    font-family: "Roboto Condensed";
+    background-image: url(../assets/img/funfoo.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header{
+    display: flex;
+    background: linear-gradient(90deg, #131c2c, #000);
+    height: 105px;
+    justify-content: center;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    display: flex;
+    width: 200px;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 60px;
+    margin-right: 120px;
+}
+
+nav ul{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: var(--secundary-color);
+    font-size: var(--sub-title);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+nav ul li a:hover{
+    color: #9c9c9c;
+    text-decoration: underline;
+}
+
+.active{
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.active:hover{
+    color: var(--primary-color);
+}
+
+#conf{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    height: 20px;
+    gap: 10px;
+}
+
+#btn-download{
+    width: 110px;
+    height: 25px;
+    border: none;
+    color: var(--secundary-color);
+    align-items: center;
+    justify-content: center;
+    background: #59823d;
+    color: #eaeaea;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+#btn-download:hover{
+    color: #fff;
+    background: #43632e;
+}
+
+#btn-login{
+    text-decoration: none;
+    color: #c3c3c3;
+    font-size: var(--font-2);
+    font-weight: 400;
+}
+
+#btn-login:hover{
+    color: #fff;
+}
+
+#barra{
+    color: #c3c3c3;
+    font-size: var(--font-1);
+    font-weight: 400;
+    cursor: default;
+}
+
+#idioma{
+    background: #000;
+    color: #c3c3c3;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#idioma:hover{
+    color: #fff;
+}
+
+
+
+#hero{
+    margin: 60px 230px 60px 230px;
+    z-index: 1;
+}
+
+.btn{
+    width: 130px;
+    height: 35px;
+    border:  none;
+    background: var(--secundary-color);
+    color:  #000;
+    font-size: var(--font-1);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-top: 30px;
+    border-radius: var(--border-radius);
+}
+
+.btn:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px 2px #00000033;
+}
+
+#ctn-banner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.carroussel {
+    position: relative;
+    width: 800px;
+    height: 100%;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    box-shadow: 0px 0px 20px 5px #000000e9;
+}
+
+.carroussel-container {
+    display: flex;
+    transition: all 1s ease;
+}
+
+#banner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px;
+    background: #3d5163a4;
+    backdrop-filter: blur(4px);
+    color: var(--secundary-color);
+}
+
+#banner h1{
+    font-size: var(--title);
+    font-weight: 500;
+}
+
+#banner h2{
+    margin-top: 15px;
+    font-size: var(--sub-title);
+    font-weight: 400;
+}
+
+.carroussel-slide {
+    position: relative;
+    min-width: 100%;
+}
+
+.carroussel-dots {
+    display: flex;
+    margin-top: 20px;
+    gap: 10px;
+    justify-content: center;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--secundary-color);
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: var(--primary-color);
+}
+
+#ctn-cards{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card{
+    width: 250px;
+}
