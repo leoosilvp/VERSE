@@ -8,7 +8,7 @@
 }
 
 :root{
-    --primary-color: #ffae00;
+    --primary-color: #6f80a6;
     --secundary-color: #f5f5f5;
     --box-shadow: 0px 0px 0px 0px #1e1e1e;
     --contorno: 1px solid #ffffff29;
@@ -30,7 +30,7 @@ body{
 
 header{
     display: flex;
-    background: linear-gradient(90deg, #131c2c, #000);
+    background: linear-gradient(0deg, #13161d, #000);
     height: 105px;
     justify-content: center;
 }
@@ -42,7 +42,7 @@ header{
 
 .logo img{
     display: flex;
-    width: 200px;
+    width: 150px;
 }
 
 nav{
@@ -68,7 +68,7 @@ nav ul li a{
 }
 
 nav ul li a:hover{
-    color: #9c9c9c;
+    color: #c3c3c3;
     text-decoration: underline;
 }
 
@@ -127,9 +127,9 @@ nav ul li a:hover{
 }
 
 #idioma{
-    background: #000;
+    background: #000000;
     color: #c3c3c3;
-    border-radius: 3px;
+    border-radius: var(--border-radius);
     cursor: pointer;
 }
 
@@ -137,13 +137,71 @@ nav ul li a:hover{
     color: #fff;
 }
 
-
-
 #hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-image: url(../assets/img/fundo.gif);
     background-repeat: no-repeat;
     background-size: 100%;
     z-index: 1;
+}
+
+#ctn-menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#menu{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 880;
+    background: #415776b8;
+    backdrop-filter: blur(5px);
+    border-radius: var(--border-radius);
+}
+
+#menu a{
+    text-decoration: none;
+    color: var(--secundary-color);
+    padding: 10px 15px;
+}
+
+#menu a:hover{
+    background: linear-gradient(90deg, #4062a8b3, #00000000);
+}
+
+#ctn-buscar{
+    display: flex;
+    height: 30px;
+}
+
+#buscar{
+    margin-right: 5px;
+    display: flex;
+    background-color: #83889d25;
+    padding: 3px;
+    border-radius: var(--border-radius);
+}
+
+#txt-buscar{
+    width: 150px;
+    background: #00000041;
+    color: #c3c3c3;
+    border: none;
+    border-radius: 3px 0px 0px 3px;
+    padding: 3px;
+}
+
+#btn-buscar{
+    width: 30px;
+    background: #c6c6c625;
+    border: none;
+    border-radius: 0px 3px 3px 0px;
+    cursor: pointer;
 }
 
 .btn{
@@ -194,8 +252,8 @@ nav ul li a:hover{
     justify-content: center;
     text-align: center;
     padding: 50px;
-    background: #3d5163a4;
-    backdrop-filter: blur(15px);
+    background: #41577666;
+    backdrop-filter: blur(10px);
     color: var(--secundary-color);
 }
 
