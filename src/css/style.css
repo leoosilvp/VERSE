@@ -624,4 +624,33 @@ nav ul li a:hover{
     .play-card h1{
         display: none;    
     }
+
+    .destaque{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 95%;
+        padding: 20px;
+    }
+
+    .img-destaque{
+        display: flex;
+        align-items: center;
+        padding: 0px;
+    }
+
+    .img-destaque img{
+        display: flex;
+        align-items: center;
+        width: 300px;
+    }
+
+    .info-destaque{
+        padding: 10px;
+    }
+
+    .avaliacao{
+        gap: 10px 15px;
+    }
 }
