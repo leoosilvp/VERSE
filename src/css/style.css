@@ -10,16 +10,17 @@
 :root{
     --primary-color: #6f80a6;
     --secundary-color: #f5f5f5;
-    --box-shadow: 0px 0px 0px 0px #1e1e1e;
     --contorno: 1px solid #ffffff29;
+    --box-shadow: 0px 0px 20px 5px #000000b3;
     --title: 2rem;
-    --title-card: 1.4rem;
     --sub-title: 1.02rem;
+    --title-card: 1.4rem;
     --font: 1.1rem;
     --font-1: 1rem;
-    --font-2: 0.8rem;
-    --transition: all 0.3s ease;
+    --font-2:0.9rem;
+    --font-3: 0.8rem;
     --border-radius: 3px;
+    --transition: all 0.3s ease;
 }
 
 body{
@@ -178,10 +179,11 @@ nav ul li a:hover{
     align-items: center;
     justify-content: center;
     width: 880;
-    background: linear-gradient(90deg, #4a61829c, #2c3b50d4);
-    backdrop-filter: blur(4px);
+    background: #293548d8;
+    backdrop-filter: blur(5px);
     border-radius: var(--border-radius);
-    box-shadow: 0px 0px 20px 5px #0000005e;
+    border: var(--contorno);
+    box-shadow: var(--box-shadow);
 }
 
 #menu a{
@@ -226,21 +228,27 @@ nav ul li a:hover{
 
 /* carrossel */
 #ctn-banner{
+    margin-top: 60px;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
 .carroussel {
-    margin-top: 60px;
     position: relative;
     width: 800px;
     overflow: hidden;
-    background: #41577666;
-    backdrop-filter: blur(10px);
-    border-radius: var(--border-radius);
-    box-shadow: 0px 0px 20px 5px #000000e9;
+    background: #1e273565;
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    transition: var(--transition);
+    border: var(--contorno);
+}
+
+.carroussel:hover{
+    transform: scale(1.02);
 }
 
 .carroussel-container {
@@ -250,23 +258,23 @@ nav ul li a:hover{
 
 #banner{
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    padding: 50px;
+    padding: 15px 20px;
     color: var(--secundary-color);
 }
 
-#banner h1{
-    font-size: var(--title);
-    font-weight: 500;
+#banner .img-destaque img{
+    margin: 0;
+    width: 300px;
 }
 
-#banner h2{
-    margin-top: 15px;
-    font-size: var(--sub-title);
-    font-weight: 400;
+#banner .info-destaque{
+    padding: 20px 0px 15px 20px;
+}
+
+#banner .avaliacao{
+    gap: 10px 15px;
 }
 
 .carroussel-slide {
@@ -293,25 +301,6 @@ nav ul li a:hover{
     background-color: var(--primary-color);
 }
 
-.btn{
-    width: 130px;
-    height: 35px;
-    border:  none;
-    background: var(--secundary-color);
-    color:  #000;
-    font-size: var(--font-1);
-    font-weight: 600;
-    cursor: pointer;
-    transition: var(--transition);
-    margin-top: 30px;
-    border-radius: var(--border-radius);
-}
-
-.btn:hover{
-    transform: scale(1.1);
-    box-shadow: 0px 0px 10px 2px #00000033;
-}
-
 /* cards */
 #ctn-cards{
     margin: 90px 120px 0px 120px ;
@@ -332,7 +321,7 @@ nav ul li a:hover{
     width: 320px;
     height: 450px;
     border-radius: var(--border-radius);
-    box-shadow: 0px 0px 20px 5px #0000009d;
+    box-shadow: var(--box-shadow);
     color: var(--secundary-color);
     transition: var(--transition);
     cursor: pointer;
@@ -380,8 +369,9 @@ nav ul li a:hover{
     justify-content: center;
 }
 
-#destaque{
+.destaque{
     display: flex;
+    align-items: center;
     width: 1060px;
     height: 100%;
     background: #8d8ea43c;
@@ -390,7 +380,8 @@ nav ul li a:hover{
     padding: 20px;
 }
 
-.card-destaque{
+.img-destaque{
+    margin: 0;
     display: flex;
     width: 350px;
     flex-direction: column;
@@ -398,11 +389,11 @@ nav ul li a:hover{
     cursor: pointer;
 }
 
-.card-destaque:hover{   
-    transform: scale(1.06);
+.img-destaque:hover{   
+    transform: scale(1.02);
 }
 
-.card-destaque img{
+.img-destaque img{
     display: flex;
 }
 
@@ -429,7 +420,7 @@ nav ul li a:hover{
     margin-top: 15px;
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 15px 20px;
     align-items: center;
 }
 
@@ -461,9 +452,10 @@ nav ul li a:hover{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: var(--font-1);
+    font-size: var(--font-2);
+    font-weight: 500;
     color: #8f8f8f;
-    width: 100px;
+    padding: 10px;
     height: 25px;
     border-radius: var(--border-radius);
     background: #00000061;
@@ -476,7 +468,7 @@ nav ul li a:hover{
 }
 
 .buy-destaque{
-    margin-top: 20px;
+    margin-top: 50px;
     display: flex;
     justify-content: end;
 }
@@ -503,7 +495,7 @@ nav ul li a:hover{
     border: none;
     color: var(--secundary-color);
     background: #43632e;
-    box-shadow: 0px 0px 10px 2px #00000033;
+    box-shadow: 0px 0px 10px 2px #00000066;
     transition: var(--transition);
     cursor: pointer;
 }
@@ -590,6 +582,30 @@ nav ul li a:hover{
         width: 95%;
     }
 
+    #ctn-banner{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #banner{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 30px;
+    }
+
+    #banner .img-destaque{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #banner .info-destaque{
+        margin: 0;
+        margin-top: 20px;
+        padding: 0px;
+    }
+
     #ctn-cards{
         margin: 90px 10px 0px 10px;
         justify-content: space-between;
@@ -608,10 +624,4 @@ nav ul li a:hover{
     .play-card h1{
         display: none;    
     }
-
-    #destaque{
-        width: 95%;
-
-    }
-
 }
