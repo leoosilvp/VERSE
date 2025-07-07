@@ -335,6 +335,7 @@ nav ul li a:hover{
     box-shadow: 0px 0px 20px 5px #0000009d;
     color: var(--secundary-color);
     transition: var(--transition);
+    cursor: pointer;
 }
 
 .card:hover {
@@ -385,4 +386,53 @@ nav ul li a:hover{
     background: #8d8ea448;
     backdrop-filter: blur(4px);
     border-radius: 10px;
+}
+
+
+@media (width < 768px){
+
+    nav{
+        display: none;
+    }
+
+    #conf{
+        display: none;
+    }
+
+    #ctn-menu{
+        display: none;
+    } 
+
+    #hero{
+        background-size: 200%;
+    }
+
+    .carroussel{
+        width: 95%;
+    }
+
+    #ctn-cards{
+        margin: 90px 10px 0px 10px;
+        justify-content: space-between;
+        gap: 20px 10px;
+    }
+
+    .esc{
+        display: none;
+    }
+
+    .card{
+        width: 170px;
+        height: 230px;
+    }
+
+    .play-card h1{
+        display: none;    
+    }
+
+    #destaque{
+        width: 95%;
+
+    }
+
 }
