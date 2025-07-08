@@ -230,6 +230,7 @@ nav ul li a:hover{
 #ctn-banner{
     margin-top: 60px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -339,7 +340,7 @@ nav ul li a:hover{
 
 .info-card h2{
     display: flex;
-    width: 60px;
+    width: 100px;
     align-items: center;
     justify-content: center;
     background: #384b75;
@@ -347,12 +348,19 @@ nav ul li a:hover{
 
 .info-card h3{
     display: flex;
-    width: 100px;
+    width: 190px;
     font-weight: 500;
     align-items: center;
     justify-content: center;
     color: var(--secundary-color);
     background: #000000;
+}
+
+.info-card h3 span{
+    font-size: var(--font-1);
+    margin-right: 10px;
+    text-decoration: line-through;
+    color: #c3c3c3;
 }
 
 .play-card h1{
